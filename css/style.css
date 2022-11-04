@@ -1,0 +1,61 @@
+body {
+  background-color: rgba(209, 215, 174, 0.7254901961);
+  padding: 100px;
+}
+
+.matches_block {
+  display: grid;
+  grid-template-columns: 150px 150px 150px 150px;
+  margin: 0px 100px;
+  min-width: 350px;
+  max-width: 50%;
+  min-height: 300px;
+  color: f0000;
+  padding: 50px;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  margin: 0 auto;
+}
+.matches_cell {
+  background-color: #ffffff;
+  width: 150px;
+  height: 150px;
+  position: relative;
+}
+
+.match_vertical {
+  position: absolute;
+  background: url(https://kindbi.com/design/default/img/spichka.png) center center/cover no-repeat;
+  height: 85%;
+  width: 10%;
+  top: 30px;
+  left: 2px;
+  cursor: pointer;
+}
+.match_vertical_inactive {
+  position: absolute;
+  background: url(https://kindbi.com/design/default/img/spichka-ten.png) center center/cover no-repeat;
+  height: 85%;
+  width: 10%;
+  top: 20px;
+  left: 2px;
+  cursor: pointer;
+}
+.match_horizont {
+  position: absolute;
+  background: url(https://kindbi.com/design/default/img/spichka-gor.png) center center/cover no-repeat;
+  height: 10%;
+  width: 85%;
+  top: 10px;
+  right: 0;
+  cursor: pointer;
+}
+.match_horizont_inactive {
+  position: absolute;
+  background: url(https://kindbi.com/design/default/img/spichka-gor-ten.png) center center/cover no-repeat;
+  height: 10%;
+  width: 85%;
+  top: 10px;
+  right: 0;
+  cursor: pointer;
+}/*# sourceMappingURL=style.css.map */

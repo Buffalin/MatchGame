@@ -1,0 +1,62 @@
+$mathc_width: 10%
+$match_height: 85%
+
+body
+    background-color: #d1d7aeb9 
+    padding: 100px
+.matches
+    &_block
+        display: grid
+        grid-template-columns: 150px 150px 150px 150px
+        margin: 0px 100px
+        min-width: 350px
+        max-width: 50%
+        min-height: 300px
+        color: f0000
+        padding: 50px
+        transform: rotate(-45deg)
+        margin: 0 auto
+
+    &_cell
+        background-color: #ffffff
+        width: 150px
+        height: 150px
+        position: relative
+.match
+    &_vertical
+        position: absolute
+        background: url(https://kindbi.com/design/default/img/spichka.png) center (center/cover) no-repeat
+        height: $match_height
+        width:  $mathc_width 
+        top: 30px
+        left: 2px
+        cursor: pointer
+        &_inactive
+            position: absolute
+            background: url(https://kindbi.com/design/default/img/spichka-ten.png) center (center/cover) no-repeat
+            height: $match_height
+            width: $mathc_width
+            top: 20px
+            left: 2px
+            cursor: pointer
+
+    &_horizont
+        position: absolute 
+        background: url(https://kindbi.com/design/default/img/spichka-gor.png)  center (center/cover) no-repeat
+        height: $mathc_width
+        width: $match_height
+        top: 10px
+        right: 0
+        cursor: pointer
+        &_inactive
+            position: absolute
+            background: url(https://kindbi.com/design/default/img/spichka-gor-ten.png) center (center/cover) no-repeat
+            height: $mathc_width
+            width: $match_height
+            top: 10px
+            right: 0
+            cursor: pointer
+
+
+
+    
