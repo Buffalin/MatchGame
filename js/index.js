@@ -84,11 +84,9 @@ document.addEventListener("DOMContentLoaded", function () {
     }
     
     function matchesPlacedIsCorrect() {
-
         let result = [];
 
         if (placedMatchIds.length === data.targetIds.length) {
-            
             data.targetIds.forEach((item) => {
                 placedMatchIds.forEach((id) => {
                     if (item == id) {
@@ -101,7 +99,7 @@ document.addEventListener("DOMContentLoaded", function () {
     };
 
     mainBlock.addEventListener("click", (event) => {
-        if (winner === true) {
+        if (winner) {
             alert('Ты уже победитель, что тебе еще надо?')
             return
         } else if (event.target && event.target.classList.contains('match')) {
