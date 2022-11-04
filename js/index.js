@@ -1,6 +1,6 @@
 const data = {
-    blocks: 16,
-    actives: [13, 15, 20, 21, 22, 23, 28, 30],
+    cells: 16,
+    activeMatches: [13, 15, 20, 21, 22, 23, 28, 30],
     moveMatches: [20, 28, 30],
     targetIds: [14, 16, 24]
 };
@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     function createMatch(type, id) {
         const match = document.createElement("DIV");
-        const isActive = data.actives.some(item => item == id)
+        const isActive = data.activeMatches.some(item => item == id)
         match.classList.add('match', `match_${type}${isActive ? '' : '_inactive'}`);
         match.setAttribute('id', id);
         match.setAttribute('active', isActive ? 1 : 0)
@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded", function () {
         return cell
     };
 
-    for (let i = 1; i <= data.blocks; i++) {
+    for (let i = 1; i <= data.cells; i++) {
         mainBlock.append(createCell(i))
     };
 
