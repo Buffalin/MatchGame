@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", function () {
     
     const mainBlock = document.querySelector('.matches_block');
 
-    let takenMatchIds = [];
+    let takedMatchIds = [];
     let placedMatchIds = [];
     let winner;
 
@@ -55,13 +55,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
     function toggleMatch(match) {
 
-        if (match.getAttribute('active') == 1 && takenMatchIds.length < data.targetIds.length ) {
-            takenMatchIds.push(match.id);
+        if (match.getAttribute('active') == 1 && takedMatchIds.length < data.targetIds.length) {
+            takedMatchIds.push(match.id);
             match.setAttribute('active', 0);
             placedMatchIds = placedMatchIds.filter((item) => item !== match.id);
             setMatchInactive(match);
 
-        } else if (match.getAttribute('active') == 0 && takenMatchIds.length > 0 ) {
+        } else if (match.getAttribute('active') == 0 && takedMatchIds.length > 0) {
             match.setAttribute('active', 1);
             placedMatchIds.push(match.id);
             setMatchActive(match);
@@ -71,9 +71,9 @@ document.addEventListener("DOMContentLoaded", function () {
     function matchesTakedIsCorrect() {
         let result = [];
 
-        if (takenMatchIds.length === data.targetIds.length) {
+        if (takedMatchIds.length === data.targetIds.length) {
             data.moveMatches.forEach((item) => {
-                takenMatchIds.forEach((id) => {
+                takedMatchIds.forEach((id) => {
                     if (item == id) {
                         result.push(id);
                     }
