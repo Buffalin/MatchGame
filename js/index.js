@@ -78,7 +78,6 @@ document.addEventListener("DOMContentLoaded", function () {
                         result.push(id);
                     }
                 })
-
             });
         }
         return result.length === data.moveMatches.length
