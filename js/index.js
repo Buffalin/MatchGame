@@ -64,6 +64,7 @@ document.addEventListener("DOMContentLoaded", function () {
         } else if (match.getAttribute('active') == 0 && takedMatchIds.length > 0) {
             match.setAttribute('active', 1);
             placedMatchIds.push(match.id);
+            takedMatchIds = takedMatchIds.filter((item) => item !== match.id)
             setMatchActive(match);
         };
     };
